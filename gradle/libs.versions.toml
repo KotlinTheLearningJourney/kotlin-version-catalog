@@ -1,0 +1,31 @@
+[versions]
+kotlinVersion = "2.1.0"
+kotlinJacksonVersion = "2.18.2"
+springBootVersion = "3.4.1"
+springDependencyManagementVersion = "1.1.7"
+postgresVersion = "42.7.5"
+jUnitPlatformVersion = "1.11.4"
+
+[plugins]
+kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlinVersion" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlinVersion" }
+spring-boot = { id = "org.springframework.boot", version.ref = "springBootVersion" }
+spring-boot-dependency-management = { id = "io.spring.dependency-management", version.ref = "springDependencyManagementVersion" }
+spring-boot-jpa = { id = "org.jetbrains.kotlin.plugin.jpa", version.ref = "kotlinVersion" }
+
+[libraries]
+#Spring Boot
+spring-boot-starter-data-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa", version.ref = "springBootVersion" }
+spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "springBootVersion" }
+
+#Kotlin
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlinVersion" }
+kotlin-jackson-module = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "kotlinJacksonVersion" }
+
+#Test
+test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5", version.ref = "kotlinVersion" }
+test-junit-platform = { module = "org.junit.platform:junit-platform-launcher", version.ref = "jUnitPlatformVersion" }
+test-spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "springBootVersion" }
+
+#Database
+postgresql = { module = "org.postgresql:postgresql", version.ref = "postgresVersion" }
