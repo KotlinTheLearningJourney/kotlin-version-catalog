@@ -29,3 +29,8 @@ test-spring-boot-starter = { module = "org.springframework.boot:spring-boot-star
 
 #Database
 postgresql = { module = "org.postgresql:postgresql", version.ref = "postgresVersion" }
+
+[bundles]
+spring-boot = [ "spring-boot-starter-data-jpa", "spring-boot-starter-web" ]
+tests = [ "test-junit5", "test-junit-platform", "test-spring-boot-starter" ]
+kotlin = [ "kotlin-reflect", "kotlin-jackson-module" ]
