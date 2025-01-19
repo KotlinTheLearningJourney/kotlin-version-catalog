@@ -21,14 +21,10 @@ repositories {
 }
 
 dependencies {
-	implementation(libs.spring.boot.starter.data.jpa)
-	implementation(libs.spring.boot.starter.web)
-	implementation(libs.kotlin.jackson.module)
-	implementation(libs.kotlin.reflect)
+	implementation(libs.bundles.spring.boot)
+	implementation(libs.bundles.kotlin)
 	runtimeOnly(libs.postgresql)
-	testImplementation(libs.test.spring.boot.starter)
-	testImplementation(libs.test.junit5)
-	testImplementation(libs.test.junit.platform)
+	testImplementation(libs.bundles.tests)
 }
 
 kotlin {
