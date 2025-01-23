@@ -3,7 +3,6 @@ plugins {
 	alias(libs.plugins.kotlin.jvm)
 	alias(libs.plugins.spring.boot)
 	alias(libs.plugins.spring.boot.dependency.management)
-	alias(libs.plugins.spring.boot.jpa)
 }
 
 group = "br.com.ktlj"
@@ -23,7 +22,6 @@ repositories {
 dependencies {
 	implementation(libs.bundles.spring.boot)
 	implementation(libs.bundles.kotlin)
-	runtimeOnly(libs.postgresql)
 	testImplementation(libs.bundles.tests)
 }
 

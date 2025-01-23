@@ -1,0 +1,18 @@
+classDiagram
+    class Book {
+        - title: String
+        - authors: List[Author]
+    }
+    class Library {
+        - books: List[Book]
+        - type: LibraryType
+    }
+    class Author {
+        - name: String
+    }
+    Library "1" -- "*" Book : contains
+    Book "1" -- "*" Author : written by
+    class LibraryType {
+        - description: String = "ONLINE" or "PHYSICAL"
+    }
+    Library "1" -- "1" LibraryType : has type

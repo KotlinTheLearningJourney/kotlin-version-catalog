@@ -1,1 +1,1 @@
-rootProject.name = "kotlin-version-catalog"
+rootProject.name = "kotlin-fixtures"
